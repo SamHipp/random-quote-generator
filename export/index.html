@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+<!--
+    USER STORIES
+User Story #1: I can see a wrapper element with a corresponding id="quote-box".
+
+User Story #2: Within #quote-box, I can see an element with a corresponding id="text".
+
+User Story #3: Within #quote-box, I can see an element with a corresponding id="author".
+
+User Story #4: Within #quote-box, I can see a clickable element with a corresponding id="new-quote".
+
+User Story #5: Within #quote-box, I can see a clickable a element with a corresponding id="tweet-quote".
+
+User Story #6: On first load, my quote machine displays a random quote in the element with id="text".
+
+User Story #7: On first load, my quote machine displays the random quote's author in the element with id="author".
+
+User Story #8: When the #new-quote button is clicked, my quote machine should fetch a new quote and display it in the #text element.
+
+User Story #9: My quote machine should fetch the new quote's author when the #new-quote button is clicked and display it in the #author element.
+
+User Story #10: I can tweet the current quote by clicking on the #tweet-quote a element. This a element should include the "twitter.com/intent/tweet" path in its href attribute to tweet the current quote.
+
+User Story #11: The #quote-box wrapper element should be horizontally centered. Please run tests with browser's zoom level at 100% and page maximized.
+      -->
+
+    <!--
+        Title
+          -->
+          <h1>Random Quote Generator</h1>
+    <!--
+        Card
+          -->
+          <section id="quote-box">
+              <p id="text">Test</p>
+              <p id="author">Test</p>
+              <div id="buttons">
+                  <button id="tweet-button"><a id="tweet-quote" href=""><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295	C22.92,5.084,21.534,4.436,20,4.436c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215	c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439	c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23	c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705	c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396	c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"/></svg></a></button>
+                  <button id="new-quote">New Quote</button>
+              </div>
+          </section>
+    <!--
+        Footer
+          -->
+          <footer id="footer">
+              <p id="footer-text">Made by Sam Hipp</p>
+          </footer>
+</body>
+</html>

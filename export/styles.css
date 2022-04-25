@@ -1,0 +1,165 @@
+:root {
+  --hue: 180;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, hsl(var(--hue), 80%, 40%), hsl(var(--hue), 80%, 10%));
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--hue), 80%, 10%);
+  color: hsl(var(--hue), 20%, 90%);
+  text-align: center;
+}
+
+#quote-box {
+  min-width: 50ch;
+  max-width: 120ch;
+  width: 50vw;
+  min-height: 15rem;
+  background-color: hsl(var(--hue), 20%, 90%);
+  border-radius: 1rem;
+  border: 0.2rem solid hsl(var(--hue), 80%, 10%);
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#quote-box #author {
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--hue), 80%, 10%);
+  font-style: italic;
+}
+
+#quote-box #text {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--hue), 80%, 10%);
+  margin: 2rem 2rem 0 2rem;
+  text-align: center;
+}
+
+#quote-box #buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 3rem auto;
+      flex-basis: 3rem auto;
+  gap: 2rem;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto auto 2rem auto;
+}
+
+#quote-box button {
+  background-color: hsl(var(--hue), 80%, 10%);
+  border-radius: .25rem;
+  height: 2rem;
+  border: 0.1rem solid hsl(var(--hue), 80%, 10%);
+  color: hsl(var(--hue), 20%, 90%);
+  fill: hsl(var(--hue), 20%, 90%);
+  -webkit-box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+#quote-box button:hover {
+  background-color: hsl(var(--hue), 80%, 40%);
+  cursor: pointer;
+  -webkit-animation-name: btn;
+          animation-name: btn;
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#quote-box button:active {
+  -webkit-animation-name: btn-press;
+          animation-name: btn-press;
+  -webkit-animation-duration: 25ms;
+          animation-duration: 25ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#twitter-icon {
+  fill: hsl(var(--hue), 20%, 90%);
+}
+
+@-webkit-keyframes btn {
+  100% {
+    -webkit-transform: translate(0, -0.1rem);
+            transform: translate(0, -0.1rem);
+    -webkit-box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+            box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes btn {
+  100% {
+    -webkit-transform: translate(0, -0.1rem);
+            transform: translate(0, -0.1rem);
+    -webkit-box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+            box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.4);
+  }
+}
+
+@-webkit-keyframes btn-press {
+  100% {
+    background-color: hsl(var(--hue), 60%, 60%);
+  }
+}
+
+@keyframes btn-press {
+  100% {
+    background-color: hsl(var(--hue), 60%, 60%);
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+footer p {
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(var(--hue), 80%, 10%);
+  color: hsl(var(--hue), 20%, 90%);
+}
+/*# sourceMappingURL=styles.css.map */

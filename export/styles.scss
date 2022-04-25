@@ -1,0 +1,107 @@
+:root {--hue: 180;}
+
+$primary-color: hsl(var(--hue), 80%, 40%);
+$secondary-color: hsl(var(--hue), 20%, 90%);
+$tertiary-color: hsl(var(--hue), 60%, 60%);
+$texty-color: hsl(var(--hue), 80%, 10%);
+
+@mixin text-styles($size, $weight) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family:Arial, Helvetica, sans-serif;
+    color: $texty-color;
+}
+
+@mixin flex($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $justify;
+}
+body {
+    @include flex(column, center);
+    height: 100vh;
+    background: linear-gradient(45deg, $primary-color, $texty-color);
+}
+
+h1 {
+
+    @include text-styles(4rem, 800);
+    color: $secondary-color;
+    text-align: center;
+}
+#quote-box {
+    min-width: 50ch;
+    max-width: 120ch;
+    width: 50vw;
+    min-height: 15rem;
+    background-color: $secondary-color;
+    border-radius: 1rem;
+    border: .2rem solid $texty-color;
+    box-shadow: .2rem .2rem .2rem rgba(0,0,0,.4);
+    @include flex(column, center);
+    #author {
+        @include text-styles(1rem, 100);
+        font-style: italic;
+
+    }
+    #text {
+        @include text-styles(2rem, 300);
+        margin: 2rem 2rem 0 2rem;
+        text-align: center;
+    }
+    #buttons {
+        @include flex(row, center);
+        flex-basis: 3rem auto;
+        gap: 2rem;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto auto 2rem auto;
+    }
+    button {
+        background-color: $texty-color;
+        border-radius: .25rem;
+        height: 2rem;
+        border: .1rem solid $texty-color;
+        color: $secondary-color;
+        fill: $secondary-color;
+        box-shadow: .2rem .2rem .2rem rgba(0,0,0,.4);
+        &:hover {
+            background-color: $primary-color;
+            cursor: pointer;
+            animation-name: btn;
+            animation-duration: 200ms;
+            animation-fill-mode: forwards;
+        }
+        &:active {
+            animation-name: btn-press;
+            animation-duration: 25ms;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+#twitter-icon {
+    fill: $secondary-color;
+}
+
+@keyframes btn {
+    100% {
+        transform: translate(0, -.1rem);
+        box-shadow: .3rem .3rem .3rem rgba(0,0,0,.4);
+    }
+}
+
+@keyframes btn-press {
+    100% {
+        background-color: $tertiary-color;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    p {
+        @include text-styles(1rem, 100);
+        color: $secondary-color;
+    }
+}
